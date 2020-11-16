@@ -1,0 +1,8 @@
+<h2>Will this be your new home?</h2>
+<%= render "shared/show_flat" %>
+<%= simple_form_for([@flat, @booking]) do |f| %>
+  <%= f.input :nights, as: :numeric %>
+  <%= f.association :client, prompt: "Choose a client" %>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Back to index", flats_path %>

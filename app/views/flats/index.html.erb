@@ -1,0 +1,12 @@
+<h1>Choose your favorite flat</h1>
+<div class="row justify-content-center"">
+  <% @flats.each do |flat| %>
+    <div class="card col-lg-4 m-3">
+      <h2><%= link_to flat.name, flat_path(flat) %></h2>
+      <p><%= flat.description %></p>
+      <p>Address: <%= flat.address %></p>
+      <p>Price per night: <%= flat.price_per_night %></p>
+      <p>Max number of guests: <%= flat.number_of_guests %></p>
+    </div>
+  <% end %>
+</div>

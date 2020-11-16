@@ -1,0 +1,6 @@
+<h2>Your booking has been created</h2>
+<p><%= @booking.client.name %></p>
+<p><%= @booking.flat.name %></p>
+<p><%= @booking.nights %> nights</p>
+<p><%= @booking.total_price %>€</p>
+<%= link_to "Back to index", flats_path %>
